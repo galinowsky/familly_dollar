@@ -16,7 +16,8 @@ name: "BarChart",
     },
   },
   mounted() {
-    let JSONed = JSON.parse(JSON.stringify(this.chartData))
+    let JSONed = JSON.parse(JSON.stringify(this.chartData)).filter(item=>  item["Vendor Name"] != "Total " && item["Vendor Name"] != "Top 50")
+  console.log(JSONed)
     const names = JSONed.map(item => item["Vendor Name"]);
     const sales = JSONed.map(item => item.sales);
     // console.log({names,sales})

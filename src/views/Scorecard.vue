@@ -64,6 +64,7 @@ export default {
         });
       });
 
+  this.arrNames =  Object.keys(getData[0])
   }
   ,
   computed: mapState({
